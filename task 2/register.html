@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <h1>صفحة التسجيل</h1>
+
+    <form method="POST" action="/register">
+
+        <fieldset>
+            <legend>بيانات الحساب</legend>
+
+            <label for="reg-email">البريد الإلكتروني:</label>
+            <input type="email" id="reg-email" name="email" required>
+            <br>
+
+            <label for="reg-password">كلمة المرور:</label>
+            <input type="password" id="reg-password" name="password" required minlength="6">
+            <br>
+        </fieldset>
+
+        <fieldset>
+            <legend>بيانات شخصية</legend>
+
+            <label for="reg-phone">رقم الهاتف:</label>
+            <input type="tel" id="reg-phone" name="phone">
+            <br>
+
+            <label for="reg-birthday">تاريخ الميلاد:</label>
+            <input type="date" id="reg-birthday" name="birthday" required>
+            <br>
+
+            <fieldset>
+                <legend>الجنس</legend>
+                <label><input type="radio" name="gender" value="male" required> ذكر</label>
+                <label><input type="radio" name="gender" value="female"> أنثى</label>
+            </fieldset>
+        </fieldset>
+
+        <fieldset>
+            <legend>التفضيلات</legend>
+
+            <fieldset>
+                <legend>الهوايات</legend>
+                <label><input type="checkbox" name="hobbies" value="coding"> برمجة</label>
+                <label><input type="checkbox" name="hobbies" value="gaming"> ألعاب</label>
+                <label><input type="checkbox" name="hobbies" value="reading"> قراءة</label>
+            </fieldset>
+
+            <label for="reg-country">الدولة:</label>
+            <select id="reg-country" name="country" required>
+                <option value="">اختر دولة</option>
+                <optgroup label="الشرق الأوسط">
+                    <option value="sy">سوريا</option>
+                    <option value="egt">مصر</option>
+                </optgroup>
+                <optgroup label="أوروبا">
+                    <option value="fr">فرنسا</option>
+                    <option value="de">ألمانيا</option>
+                </optgroup>
+            </select>
+            <br>
+        </fieldset>
+
+        <button type="submit">تسجيل</button>
+    </form>
+
+    <hr>
+
+    <table border="1">
+        <caption>البيانات المسجلة سابقاً</caption>
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">البريد الإلكتروني</th>
+                <th scope="col">الهاتف</th>
+                <th scope="col">الدولة</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>layal@example.com</td>
+                <td>0555555555</td>
+                <td>سوريا</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>sara@example.com</td>
+                <td>0666666666</td>
+                <td>مصر</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

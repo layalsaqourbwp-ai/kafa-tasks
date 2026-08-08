@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST" action="/signup">
+        <label for="fullname">الاسم الكامل:</label>
+        <input type="text" id="fullname" name="fullname" required minlength="3" maxlength="50">
+        <br>
+
+        <label for="email">البريد الإلكتروني:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+
+
+        <label for="password">كلمة المرور:</label>
+        <input type="password" id="password" name="password">
+        <br>
+
+        
+        <label for="website">الموقع الإلكتروني:</label>
+        <input type="url" id="website" name="website">
+        <br>
+
+
+        <label for="phone">الهاتف:</label>
+        <input type="tel" id="phone" name="phone">
+        <br>
+
+
+        <label for="age">العمر:</label>
+        <input type="number" id="age" name="age" min="18" max="99">
+        <br>
+
+
+        <label for="birthday">تاريخ الميلاد:</label>
+        <input type="date" id="birthday" name="birthday">
+        <br>
+
+
+        <label for="files">رفع الملفات:</label>
+        <input type="file" id="files" name="files" multiple>
+        <br>
+
+
+        <input type="hidden" name="token" value="123456">
+
+        <label for="code">الرمز (5 أرقام):</label>
+        <input type="text" id="code" name="code" pattern="\d{5}" title="أدخل 5 أرقام بالضبط">
+        <br>
+
+
+        <button type="button">زر عادي</button>
+        <br>
+
+
+        <fieldset>
+            <legend>الجنس</legend>
+            <label><input type="radio" name="gender" value="male"> ذكر</label>
+            <label><input type="radio" name="gender" value="female"> أنثى</label>
+        </fieldset>
+
+
+        <fieldset>
+            <legend>الهوايات</legend>
+            <label><input type="checkbox" name="hobbies" value="coding"> برمجة</label>
+            <label><input type="checkbox" name="hobbies" value="gaming"> ألعاب</label>
+            <label><input type="checkbox" name="hobbies" value="reading"> قراءة</label>
+        </fieldset>
+
+
+        <label for="country">الدولة:</label>
+        <select id="country" name="country">
+            <optgroup label="الشرق الأوسط">
+                <option value="sy">سوريا</option>
+                <option value="egt">مصر</option>
+            </optgroup>
+            <optgroup label="أوروبا">
+                <option value="fr">فرنسا</option>
+                <option value="de">ألمانيا</option>
+            </optgroup>
+        </select>
+        <br>
+
+
+        <label for="notes">ملاحظات:</label>
+        <textarea id="notes" name="notes">نص افتراضي هنا</textarea>
+        <br>
+
+        <button type="submit">إنشاء حساب</button>
+    </form>
+</body>
+</html>
